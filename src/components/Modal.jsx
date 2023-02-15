@@ -39,11 +39,11 @@ export default function Modal() {
 
   return (
     <>
-      <button class="group relative inline-block text-base font-medium text-c4 focus:outline-none focus:ring"
+      <button className="group relative inline-block text-base font-medium text-c4 focus:outline-none focus:ring"
         type="button"
         onClick={() => setShowModal(true)}>
-            <span class="absolute inset-0 border-2 border-current"></span>
-            <span class="block border-2 border-current bg-transparent px-12 py-3 transition-transform group-hover:translate-x-2 group-hover:translate-y-2">
+            <span className="absolute inset-0 border-2 border-current"></span>
+            <span className="block border-2 border-current bg-transparent px-12 py-3 transition-transform group-hover:translate-x-2 group-hover:translate-y-2">
               Cek Kelulusan
             </span>
         </button>
