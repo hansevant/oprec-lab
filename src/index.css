@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.label-form {
+  @apply block text-sm font-medium text-gray-700 dark:text-gray-200
+}
+
+.input-form{
+  @apply mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200
+}
+
+.input-file-form{
+  @apply mt-1 w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
