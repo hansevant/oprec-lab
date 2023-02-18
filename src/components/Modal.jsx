@@ -73,7 +73,7 @@ export default function Modal() {
 
                 <form onSubmit={inquiry}>   
                     <div className="relative">
-                        <input type="search" onChange={(e) => setNpm(e.target.value)} id="default-search" className="block w-full p-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-pink-500 focus:border-pink-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-pink-500 dark:focus:border-pink-500" placeholder="Search Mockups, Logos..." required/>
+                        <input type="search" onChange={(e) => setNpm(e.target.value)} id="default-search" className="block w-full p-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-pink-500 focus:border-pink-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-pink-500 dark:focus:border-pink-500" placeholder="Your NPM..." required/>
                         <button type="submit" className="text-white absolute right-2.5 bottom-2.5 bg-pink-700 hover:bg-pink-800 font-medium rounded-lg text-sm px-4 py-2 dark:bg-pink-600 dark:hover:bg-pink-700">Search</button>
                     </div>
                 </form>

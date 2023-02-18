@@ -16,7 +16,7 @@ function NotFound() {
     console.log(data)
 
   return (
-    <div className="grid h-screen px-4 bg-white place-content-center dark:bg-gray-900">
+    <div className="grid h-screen w-full px-4 bg-white place-content-center dark:bg-gray-900">
         <div className="text-center">
 
             {/* (latihan) */}
