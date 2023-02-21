@@ -13,7 +13,7 @@ const Table = () => {
 
 const getUsers = async () => {
     const response = await axios.get('http://localhost:5000/registrants');
-    setUser(response.data);
+    setUser(response.data.data);
     console.log(response.data)
 }
 

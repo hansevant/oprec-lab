@@ -5,6 +5,7 @@ import Register from "./pages/Register";
 import Dashboard from "./pages/admin/Dashboard";
 import Table from "./pages/admin/Table";
 import Data from "./pages/admin/Data"
+import Login from "./pages/admin/Login";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home/>}/> 
         <Route path="/register" element={<Register/>}/> 
         <Route path="*" element={<NotFound/>}/> 
+        <Route path="/4dmin" element={<Login/>}/> 
         <Route path="/dashboard" element={<Dashboard/>}/> 
         <Route path="/table" element={<Table/>}/> 
         <Route path="/user/:npm" element={<Data />}/> 

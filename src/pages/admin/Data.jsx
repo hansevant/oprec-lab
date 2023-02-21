@@ -1,7 +1,6 @@
 import React from 'react'
 import axios from 'axios'
 import { useNavigate, useParams } from 'react-router-dom'
-import swal from 'sweetalert'
 import Swal from 'sweetalert2'
 
 const Data = () => {
@@ -70,7 +69,7 @@ const Data = () => {
         </button>
     </div>
     <div className="mt-6 w-fit mx-auto">
-        <img src={`http://localhost:5000/images/${image}`} className="w-28 " alt="profile picture" />
+        <img src={`http://localhost:5000/images/${image}`} className="w-28 " alt="wajah pendaftar" />
     </div>
 
     <div className="mt-8 mb-2 ">
