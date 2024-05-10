@@ -1,0 +1,28 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:@localhost:3306/db_oprec"
+}
+
+model Registrant {
+  id            Int      @id @default(autoincrement())
+  role          String
+  name          String
+  npm           Int      @unique
+  clas          String
+  major         String
+  region        String
+  email         String
+  number        String
+  passportPhoto String
+  file          String
+  isQualified   Boolean  @default(false)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @default(now())
+}

@@ -10,7 +10,7 @@ export default function Modal() {
   const inquiry = async(e) =>{
     e.preventDefault()
     try{
-        const response = await axios.get(`http://localhost:5000/registrants/${npm}`)
+        const response = await axios.get(`http://localhost:4000/registrants/${npm}`)
         console.log(response.data.data.isQualified)
         if(response.data.data.isQualified){
         swal({

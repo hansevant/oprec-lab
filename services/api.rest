@@ -1,0 +1,18 @@
+GET   http://localhost:4000/registrants/chart/region
+
+###
+POST http://localhost:4000/registrants/
+Content-Type: application/json
+
+{
+    "role": "Programmer",
+    "npm": 5321325,
+    "name": "Echo Set",
+    "clas": "4IA05",
+    "major": "Informatics ",
+    "email": "afalse@example.com",
+    "number": "08212939291",     
+    "passportPhoto": "https://avatars.githubusercontent.com/u/1726832",
+    "file": "dsaads",
+    "region": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullam"
+}

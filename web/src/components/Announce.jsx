@@ -2,7 +2,7 @@ import React from 'react'
 
 function Announce() {
 
-    var countDownDate = new Date("Mar 22, 2023 15:37:25").getTime();
+    var countDownDate = new Date("Sep 22, 2024 15:37:25").getTime();
 
     // Update the count down every 1 second
     var x = setInterval(function() {

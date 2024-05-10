@@ -12,7 +12,7 @@ const Table = () => {
 },[]);
 
 const getUsers = async () => {
-    const response = await axios.get('http://localhost:5000/registrants');
+    const response = await axios.get('http://localhost:4000/registrants');
     setUser(response.data.data);
     console.log(response.data)
 }

@@ -42,7 +42,7 @@ const Dashboard = () => {
   ]
 
   const getChartRole = async() => {
-    const r = await axios.get('http://localhost:5000/registrants/chart/role');
+    const r = await axios.get('http://localhost:4000/registrants/chart/role');
     setChartDataRole({
       labels: ['Asisten', 'Programmer'],
       datasets: [
@@ -76,7 +76,7 @@ const Dashboard = () => {
   }
 
   const getChartRegion = async() => {
-    const r = await axios.get('http://localhost:5000/registrants/chart/region');
+    const r = await axios.get('http://localhost:4000/registrants/chart/region');
     setChartDataRegion({
       labels: ['Depok', 'Kalimalang', 'Karawaci', 'Cengkareng', 'Salemba'],
       datasets: [
@@ -104,7 +104,7 @@ const Dashboard = () => {
   }
 
   const getChartBatch = async() => {
-    const r = await axios.get('http://localhost:5000/registrants/chart/batch');
+    const r = await axios.get('http://localhost:4000/registrants/chart/batch');
     setChartDataBatch({
       labels: ['2019', '2020', '2021'],
       datasets: [
