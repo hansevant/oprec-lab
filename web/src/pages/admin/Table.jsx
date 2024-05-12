@@ -4,18 +4,18 @@ import axios from 'axios'
 import { Link } from 'react-router-dom';
 
 const Table = () => {
-
+  const uri = process.env.REACT_APP_SERVICE_URL;
   const [users, setUser] = React.useState([]);
 
   React.useEffect(()=>{
-    getUsers();
-},[]);
+      getUsers();
+  },[]);
 
-const getUsers = async () => {
-    const response = await axios.get('http://localhost:4000/registrants');
-    setUser(response.data.data);
-    console.log(response.data)
-}
+  const getUsers = async () => {
+      const response = await axios.get(uri + '/registrants');
+      setUser(response.data.data);
+      // console.log(response.data)
+  }
 
   return (
     <>

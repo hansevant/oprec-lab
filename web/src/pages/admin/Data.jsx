@@ -4,16 +4,17 @@ import { useNavigate, useParams } from 'react-router-dom'
 import Swal from 'sweetalert2'
 
 const Data = () => {
+    const uri = process.env.REACT_APP_SERVICE_URL;
     const [data, setData] = React.useState()
     const [image, setImage] = React.useState()
 
     const luluskan = async() =>{
-        const r = await axios.patch(`http://localhost:4000/registrants/luluskan/${npm}`)
+        const r = await axios.patch(uri + `/registrants/luluskan/${npm}`)
         setData(true)
         console.log(r.data)
     }
     const gagalkan = async() =>{
-        const r = await axios.patch(`http://localhost:4000/registrants/gagalkan/${npm}`)
+        const r = await axios.patch(uri + `/registrants/gagalkan/${npm}`)
         setData(false)
         console.log(r.data)
     }
@@ -29,7 +30,7 @@ const Data = () => {
           }).then(async(result) => {
             
             if (result.isConfirmed) {
-                await axios.delete(`http://localhost:4000/registrants/${npm}`)
+                await axios.delete(uri + `/registrants/${npm}`)
               Swal.fire(
                 'Deleted!',
                 'Your file has been deleted.',
@@ -50,7 +51,7 @@ const Data = () => {
     },[]);
 
     const getUserByNpm = async () => {
-        const response = await axios.get(`http://localhost:4000/registrants/${npm}`)
+        const response = await axios.get(uri + `/registrants/${npm}`)
         setUser(response.data.data)
         setImage(response.data.data.passportPhoto)
         setData(response.data.data.isQualified)
@@ -69,7 +70,7 @@ const Data = () => {
         </button>
     </div>
     <div className="mt-6 w-fit mx-auto">
-        <img src={`http://localhost:4000/images/${image}`} className="w-28 " alt="wajah pendaftar" />
+        <img src={uri + `/images/${image}`} className="w-28 " alt="wajah pendaftar" />
     </div>
 
     <div className="mt-8 mb-2 ">
@@ -87,7 +88,7 @@ const Data = () => {
     </p>
 
     
-    <a className='text-sky-400' href={`http://localhost:4000/images/${user.file}`} >Lihat Berkas</a>
+    <a className='text-sky-400' href={uri + `/images/${user.file}`} >Lihat Berkas</a>
     <br/>
     <button className='inline-block bg-indigo-600 px-4 py-2 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500 disabled:hover:scale-100 disabled:bg-indigo-900' disabled={data ? true : false} onClick={luluskan} >Luluskan</button>
     <button className='inline-block bg-pink-600 px-4 py-2 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-pink-500 disabled:hover:scale-100 disabled:bg-pink-900' disabled={data ? false : true} onClick={gagalkan}>Gugurkan</button>

@@ -24,6 +24,7 @@ ChartJS.register(
 );
 
 const Dashboard = () => {
+  const uri = process.env.REACT_APP_SERVICE_URL;
 
   const bgc = [
     'rgba(255, 99, 132, 0.2)',
@@ -42,7 +43,7 @@ const Dashboard = () => {
   ]
 
   const getChartRole = async() => {
-    const r = await axios.get('http://localhost:4000/registrants/chart/role');
+    const r = await axios.get(uri + '/registrants/chart/role');
     setChartDataRole({
       labels: ['Asisten', 'Programmer'],
       datasets: [
@@ -76,7 +77,7 @@ const Dashboard = () => {
   }
 
   const getChartRegion = async() => {
-    const r = await axios.get('http://localhost:4000/registrants/chart/region');
+    const r = await axios.get(uri + '/registrants/chart/region');
     setChartDataRegion({
       labels: ['Depok', 'Kalimalang', 'Karawaci', 'Cengkareng', 'Salemba'],
       datasets: [
@@ -104,7 +105,7 @@ const Dashboard = () => {
   }
 
   const getChartBatch = async() => {
-    const r = await axios.get('http://localhost:4000/registrants/chart/batch');
+    const r = await axios.get(uri + '/registrants/chart/batch');
     setChartDataBatch({
       labels: ['2019', '2020', '2021'],
       datasets: [

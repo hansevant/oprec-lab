@@ -5,12 +5,13 @@ import swal from "sweetalert";
 export default function Modal() {
   const [showModal, setShowModal] = React.useState(false);
 
+  const uri = process.env.REACT_APP_SERVICE_URL;
   const[npm, setNpm] = React.useState('')
 
   const inquiry = async(e) =>{
     e.preventDefault()
     try{
-        const response = await axios.get(`http://localhost:4000/registrants/${npm}`)
+        const response = await axios.get(uri + `/registrants/${npm}`)
         console.log(response.data.data.isQualified)
         if(response.data.data.isQualified){
         swal({

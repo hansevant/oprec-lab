@@ -5,6 +5,7 @@ import swal from 'sweetalert';
 
 function Form() {
 
+    const uri = process.env.REACT_APP_SERVICE_URL;
     const navigate = useNavigate();
 
     const [name, setName] = useState("")
@@ -32,7 +33,7 @@ function Form() {
         formData.append("passportPhoto", passportPhoto)
         formData.append("file", file)
         try {
-            const response = await axios.post('http://localhost:4000/registrants', formData,{
+            const response = await axios.post(uri + '/registrants', formData,{
                 headers:{
                     "Content-Type": "multipart/form-data"
                 }
